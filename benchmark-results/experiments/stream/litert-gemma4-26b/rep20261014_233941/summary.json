@@ -1,0 +1,13 @@
+{
+  "engine": "litert",
+  "model": "gemma4-26b",
+  "reps": 1,
+  "tasks": [
+    5
+  ],
+  "memory": "0.4 GB RSS",
+  "median_gen_tps": 36.2,
+  "median_ttft_s": 1.55,
+  "median_wall_tps": 29.23,
+  "median_output_tokens": 236
+}

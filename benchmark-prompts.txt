@@ -1,0 +1,41 @@
+# 8 Prompts para Benchmark de Modelos Qwen
+# Un prompt por línea, separados por una línea vacía
+
+PROMPT_1: Escribe una función en Python que implemente un cache LRU con TTL (time-to-live). Incluye tests unitarios.
+
+PROMPT_2: Encuentra y explica el bug en este código:
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+# El problema: esta función es extremadamente lenta para n > 35.
+# Proponé una solución optimizada.
+
+PROMPT_3: Tres personas (A, B, C) están en una habitación. A dice "Al menos uno de nosotros miente". B dice "A miente". C dice "B miente". Asumiendo que solo uno dice la verdad, ¿quién dice la verdad? Explica tu razonamiento paso a paso.
+
+PROMPT_4: Explica la diferencia entre TCP y UDP. ¿Cuándo usarías cada uno? Da ejemplos concretos de uso en producción.
+
+PROMPT_5: Resume en 3 bullet points los conceptos clave de la arquitectura de microservicios, sus ventajas y desventajas principales.
+
+PROMPT_6: Write a professional email declining a job offer politely, explaining that you've decided to stay at your current company. Keep it under 150 words.
+
+PROMPT_7: Tengo un servidor Ubuntu 22.04 con Docker, Nginx y PostgreSQL. Necesito:
+1. Actualizar el kernel sin downtime
+2. Configurar SSL wildcard para *.miapp.com
+3. Hacer backup automático de PostgreSQL a S3
+Dame el plan de ejecución paso a paso, con comandos exactos.
+
+PROMPT_8: Refactorizá este código Python para que sea más mantenible, siga principios SOLID, y agregue manejo de errores:
+import requests
+def get_data(url):
+    r = requests.get(url)
+    return r.json()
+def process(data):
+    result = []
+    for item in data:
+        result.append(item['name'].upper())
+    return result
+def save(data):
+    f = open('output.json', 'w')
+    f.write(str(data))
+    f.close()

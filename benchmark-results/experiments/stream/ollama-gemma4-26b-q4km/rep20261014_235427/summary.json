@@ -1,0 +1,20 @@
+{
+  "engine": "ollama",
+  "model": "gemma4:26b-a4b-it-q4_K_M",
+  "reps": 3,
+  "tasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "memory": "N/A",
+  "median_gen_tps": 21.61,
+  "median_ttft_s": 0.6,
+  "median_wall_tps": 21.37,
+  "median_output_tokens": 1137
+}

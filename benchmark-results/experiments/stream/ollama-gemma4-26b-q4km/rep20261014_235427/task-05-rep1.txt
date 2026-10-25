@@ -1,0 +1,12 @@
+{
+  "ttft": 0.489991333000944,
+  "total": 9.617296458000055,
+  "output_tokens": 218,
+  "input_tokens": 37,
+  "internal_eval_duration": 9125504000,
+  "gen_tps": 23.884377372562223,
+  "wall_tps": 22.66749298537624,
+  "ollama_internal_tps": 23.88909149565876,
+  "rep": 1,
+  "task": 5
+}

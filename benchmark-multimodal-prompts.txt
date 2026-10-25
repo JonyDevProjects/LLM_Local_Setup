@@ -1,0 +1,69 @@
+# Prompts Multimodales para Benchmark MiniCPM-V 4.7
+# Dos tipos: A (imagen + texto) y B (texto puro - benchmark cruzado)
+
+## TIPO A: PROMPTS MULTIMODALES (requieren imagen adjunta)
+
+A1: Extrae toda la información tabular de este documento. Devuelve CSV válido con las columnas correctas.
+
+A2: Interpreta este gráfico. Identifica tendencias principales, picos, caídas y correlación entre series temporales.
+
+A3: Describe esta imagen con detalle. Quiénes están involucrados, qué están haciendo, dónde y por qué podría ser relevante. Explica el contexto completo.
+
+A4: ¿Cuál es la regla que sigue esta secuencia visual? Explica paso a paso tu razonamiento y predice qué figura sigue después del signo de interrogación.
+
+A5: Esta es una captura de pantalla de una aplicación web. Describe cada sección visible, qué funcionalidades tiene la app, e identifica posibles problemas de UX/UI.
+
+A6: Completa la solución del problema matemático mostrado en la imagen. Verifica cada paso algebraicamente y da la respuesta final exacta.
+
+A7: Compara estas dos imágenes temporalmente. ¿Qué cambió significativamente entre ambas? ¿Cuáles son las implicaciones prácticas de esos cambios?
+
+A8: Estas dos vistas muestran el mismo objeto desde ángulos diferentes. Describe cómo difieren las perspectivas y construye una descripción integrada que combine ambas.
+
+A9: Explica esta arquitectura de sistemas. ¿Cómo fluyen los datos entre componentes? ¿Cuáles son los puntos únicos de failure (single point of failure)?
+
+A10: Lee el código visible en esta imagen y explica qué hace. Identifica bugs potenciales o áreas de mejora en la lógica implementada.
+
+A11: Transcribe el texto escrito a mano de la nota. Corrige errores evidentes de escritura pero mantén el significado original del contenido.
+
+A12: Cuántos círculos rojos hay en esta imagen? Cuántos triángulos verdes? Lista cada uno con su posición descrita. No asumas — cuenta cuidadosamente.
+
+## TIPO B: PROMPTS TEXT-TO-TEXT (benchmark cruzado — mismos 8 existentes)
+
+B1: Escribe una función en Python que implemente un cache LRU con TTL (time-to-live). Incluye tests unitarios.
+
+B2: Encuentra y explica el bug en este código:
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+# El problema: esta función es extremadamente lenta para n > 35.
+# Proponé una solución optimizada.
+
+B3: Tres personas (A, B, C) están en una habitación. A dice "Al menos uno de nosotros miente". B dice "A miente". C dice "B miente". Asumiendo que solo uno dice la verdad, ¿quién dice la verdad? Explica tu razonamiento paso a paso.
+
+B4: Explica la diferencia entre TCP y UDP. ¿Cuándo usarías cada uno? Da ejemplos concretos de uso en producción.
+
+B5: Resume en 3 bullet points los conceptos clave de la arquitectura de microservicios, sus ventajas y desventajas principales.
+
+B6: Write a professional email declining a job offer politely, explaining that you've decided to stay at your current company. Keep it under 150 words.
+
+B7: Tengo un servidor Ubuntu 22.04 con Docker, Nginx y PostgreSQL. Necesito:
+1. Actualizar el kernel sin downtime
+2. Configurar SSL wildcard para *.miapp.com
+3. Hacer backup automático de PostgreSQL a S3
+Dame el plan de ejecución paso a paso, con comandos exactos.
+
+B8: Refactorizá este código Python para que sea más mantenible, siga principios SOLID, y agregue manejo de errores:
+import requests
+def get_data(url):
+    r = requests.get(url)
+    return r.json()
+def process(data):
+    result = []
+    for item in data:
+        result.append(item['name'].upper())
+    return result
+def save(data):
+    f = open('output.json', 'w')
+    f.write(str(data))
+    f.close()

@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+tmp/
+
+# Local config that may contain secrets
+.env.local
+.env.*.local
+
+# Model files (large binaries - download separately)
+*.gguf
+*.safetensors
+*.litertlm
+*.bin
+*.ckpt
+*.pt
+
+# Benchmark raw outputs (keep summary.json, not individual task files)
+benchmark-results/*/task-*
+benchmark-results/*/*.txt
+benchmark-results/*/output.*
